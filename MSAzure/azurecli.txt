@@ -1,0 +1,65 @@
+ https://aka.ms/clihats
+ https://aka.ms/afs/agent
+https://shell.azure.com/
+https://azuredevopslabs.com/
+notepad.azure.com
+https://github.com/karolzak/support-tickets-classification
+https://towardsdatascience.com/it-support-ticket-classification-and-deployment-using-machine-learning-and-aws-lambda-8ef8b82643b6
+https://www.skylinesacademy.com/resources
+https://www.thomasmaurer.ch/2020/03/az-104-study-guide-azure-administrator/
+https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal
+github/Azure/azure-quickstart-templates
+az account list
+az account show
+az group create --name TutorialResources --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad" --location eastus --output yaml
+az group create --name TutorialResources --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad" 
+az vm create --resource-group TutorialResources --name TutorialVM1 --image UbuntuLTS --generate-ssh-keys --output jsonaz vm delete -g TutorialResources  -n myVM1 --yes --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad"
+ --verbose
+az vm delete --resource-group TutorialResources --name TutorialVM1  --output json --verbose --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad"
+az vm availability-set create --name Tutorialsetav --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad" --location eastus --resource-group  TutorialResources --output yaml
+for i in `seq 1 2`; do; az vm create --resource-group TutorialResources --name myVM$i --availability-set Tutorialsetav --size Standard_DS1_v2  --vnet-name myVnet --subnet mySubnet --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
+done
+az vm availability-set create -n MyAvSet -g MyResourceGroup --platform-fault-domain-count 2 --platform-update-domain-count 2
+az vm availability-set create --name Tutorialsetav --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad" --location eastus --resource-group  TutorialResources --output yaml
+az vm create --resource-group TutorialResources --name myVM1 --availability-set Tutorialsetav --size Standard_DS1_v2  --vnet-name myVnet --subnet mySubnet --image UbuntuLTS --admin-username azureuser --generate-ssh-keys --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad"
+az vm delete -g TutorialResources  -n myVM1 --yes --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad"
+az vm availability-set delete -n Tutorialsetav -g TutorialResources --subscription "e70c2318-2a65-4ab0-abec-9ded25bc27ad"
+
+LB - session persistance & health probe
+5 tuple hash
+source ip/source port
+des ip / destination port
+protocol
+
+Traffice manager routing 
+1.priority
+2. performance
+3. weighted
+4. geographic
+5. multivalue
+6. subnet
+
+traffice manager profile( DNS ttl - 30 sec/ routing method/ endpoint- azure endpoint & external endpoint)
+
+Vnet peering regional/global peering
+allow gatewat transite, allow forward traffice , use remote gateway
+vnet to vnet
+express route
+
+
+docker login --usernamepremreg --password 8pHTBbtHKbiVa3VG8iOCJcSM/5oj51M6 premreg.azurecr.io
+backup and site recovery
+azure
+azure stack
+on premises
+azure recovery service agent
+azure site recovery
+New-AzResourceGroupDeployment `
+   -ResourceGroupName $rgName `
+   -TemplateFile $HOME/vms-template.json `
+   -TemplateParameterFile $HOME/vms-parameters.json `
+   -AsJob
+Get-AzResourceGroup -Name 'backuprg' | Remove-AzResourceGroup -Force -AsJob
+Woka0154
+Vasu9714
+romilbheda@hotmail.com
